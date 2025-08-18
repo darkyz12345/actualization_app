@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>Eye.svg</file>
+    <file>ChooseItem.svg</file>
+    <file>actualization.svg</file>
+    <file>SaveFilled.svg</file>
+    <file>TriangleRight.svg</file>
+    <file>TrashCan.svg</file>
+  </qresource>
+</RCC>

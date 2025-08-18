@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>347</width>
+    <height>174</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+	font-size: 24px;
+	text-align: center;
+	border: 0.5px solid black;
+	border-radius: 10px; 
+}
+
+QLabel {
+ 	qproperty-alignment: AlignCenter; 
+	
+}
+
+QTabWidget::pane {
+    top: -1px;
+}
+
+
+QTabWidget::tab-bar {
+    left: 5px;
+}
+
+QTabBar::tab {
+    color: #bbb;
+    border: 1px solid #444;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 8px 16px;
+    margin-right: 4px;
+}
+
+QTabBar::tab:hover {
+    background: rgba(16, 67, 188, 255);
+    color: #fff;
+}
+
+QTabBar::tab:selected {
+    background: rgba(8, 4, 188, 255);
+    color: #fff;
+    margin-bottom: -1px;
+}
+
+QTabBar::tab:!selected {
+    margin-top: 1px;
+}
+
+QWidget {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(8, 4, 188, 255), stop:1 rgba(24, 129, 187, 255));
+	color: white;
+}
+
+QPushButton:hover {
+	background: rgba(16, 67, 188, 255);
+}
+
+QPushButton:pressed {
+	background: rgba(8, 4, 188, 255);
+}
+
+QHeaderView::section {
+        background-color: #2e3f6e;
+        color: white;
+        font-weight: bold;
+        padding: 4px;
+        border: 1px solid #6c6c6c;
+    }</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Обработка данных может
+занять много времени,
+также требуется стабильное
+подключение к интернету.</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

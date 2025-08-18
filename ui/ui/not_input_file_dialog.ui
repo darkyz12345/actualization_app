@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NotInputFileDialog</class>
+ <widget class="QDialog" name="NotInputFileDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>150</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Warning</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+	font-size: 24px;
+	text-align: center;
+	border: 0.5px solid black;
+	border-radius: 10px; 
+}
+
+QLabel {
+ 	qproperty-alignment: AlignCenter; 
+	
+}
+
+QWidget {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(8, 4, 188, 255), stop:1 rgba(24, 129, 187, 255));
+	color: white;
+}
+
+QPushButton:hover {
+	background: rgba(16, 67, 188, 255);
+}
+
+QPushButton:pressed {
+	background: rgba(8, 4, 188, 255);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Вы не выбрали файл</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
