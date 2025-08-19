@@ -28,7 +28,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Actualization):
         self.result_table_view.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.ResizeToContents)
         self.result_table_view.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
         # self.model.appendRow([CenteredItem('1'), CenteredItem('1'), CenteredItem('1'), CenteredItem('1')])
-        self.tabWidget.setCurrentWidget(self.selenium_tab)
+        self.tabWidget.setCurrentWidget(self.reading_file_tab)
         self.input_file_btn.clicked.connect(self.open_file_dialog)
         self.clear_btn.clicked.connect(self.clear_selected_path_btn)
         self.run_btn.clicked.connect(self.execute_read_btn)
