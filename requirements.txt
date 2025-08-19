@@ -1,6 +1,6 @@
 beautifulsoup4
 selenium
-docx==0.2.4
+docx==1.1.2
 et_xmlfile==2.0.0
 lxml==6.0.0
 openpyxl==3.1.5
