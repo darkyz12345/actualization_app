@@ -19,6 +19,7 @@ def read_data_from_docx(source_path: str, progress_bar: pyqtSignal) -> list[str]
     :return: A list of state standard names read from the source file.
     """
     data = {'O`zDSt': r'(O`z DSt \S+|O`zDSt \S+)',
+            'O’zDSt': r'(O’z DSt \S+|O’zDSt \S+)',
             'ГОСТ': r'(ГОСТ ISO \S+|ГОСТ Р МЭК \S+|ГОСТ Р \S+|ГОСТ IEC \S+|ГОСТ МЭК \S+|ГОСТ EN \S+|ГОСТ \S+|ГОСТ\S+)',
             'ISO': r'(ISO \S+)',
             'UzTR.': r'(UzTR.\S+)'}
