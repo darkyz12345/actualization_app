@@ -1,5 +1,5 @@
 from PyQt5 import QtCore
-from read_state_standard import read_data_from_docx, save_to_txt, read_data_for_search, get_info_st_list, save_table_to_file
+from read_state_standard import read_data_from_docx, save_to_txt, read_data_for_search, get_info_st_list, save_table_to_file, read_data_from_pdf
 
 class ReadWorker(QtCore.QObject):
     finished = QtCore.pyqtSignal(list)
@@ -10,7 +10,8 @@ class ReadWorker(QtCore.QObject):
         self.filename = filename
 
     def run(self):
-        data = read_data_from_docx(self.filename, progress_bar=self.progress)
+        # data = read_data_from_docx(self.filename, progress_bar=self.progress)
+        data = read_data_from_pdf(self.filename, self.progress)
         self.finished.emit(data)
 
 class SaveFileWorker(QtCore.QObject):

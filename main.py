@@ -171,9 +171,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Actualization):
         options = QtWidgets.QFileDialog.Options()
         filename, _ = QtWidgets.QFileDialog.getOpenFileName(
             self,
-            "Выберите файл(поддерживается пока что только формат docx)",
+            "Выберите файл(только формат pdf)",
             "",
-            "Документы (*.docx)",
+            "PDF files (*.pdf)",
             options=options
         )
         if filename:
@@ -213,6 +213,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Actualization):
         self.founded_list.clear()
         for i, item in enumerate(result, start=1):
             self.founded_list.addItem(f'{i}) {item}')
+            self.founded_list_widget.addItem(f'{i}) {item}')
         dialog = SuccessReadDilog()
         dialog.save_clicked.connect(self.on_save_btn)
         dialog.to_clicked.connect(self.handle_to)
