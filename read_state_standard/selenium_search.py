@@ -59,7 +59,7 @@ def search_st(driver: webdriver.Chrome, wait: WebDriverWait, st: str) -> dict[st
             res["url"] = url
 
             # Скриншот самой карточки
-            card.screenshot(f"screen_{st}.png")
+            # card.screenshot(f"screen_{st}.png")
 
             if checkpoint == "NO":
                 card.click()
